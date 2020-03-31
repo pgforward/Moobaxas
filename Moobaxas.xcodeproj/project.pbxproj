@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A0B334124317511003105AB /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0B334024317511003105AB /* AboutView.swift */; };
+		6A0B33432431775F003105AB /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0B33422431775F003105AB /* Utilities.swift */; };
 		6A8D9B66242322B50053ABB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8D9B65242322B50053ABB1 /* AppDelegate.swift */; };
 		6A8D9B68242322B50053ABB1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8D9B67242322B50053ABB1 /* SceneDelegate.swift */; };
 		6A8D9B6B242322B50053ABB1 /* Moobaxas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6A8D9B69242322B50053ABB1 /* Moobaxas.xcdatamodeld */; };
@@ -14,9 +16,21 @@
 		6A8D9B6F242322B70053ABB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A8D9B6E242322B70053ABB1 /* Assets.xcassets */; };
 		6A8D9B72242322B70053ABB1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A8D9B71242322B70053ABB1 /* Preview Assets.xcassets */; };
 		6A8D9B75242322B70053ABB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A8D9B73242322B70053ABB1 /* LaunchScreen.storyboard */; };
+		6A8D9B852423244E0053ABB1 /* sbLoop8.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6A8D9B7D2423244D0053ABB1 /* sbLoop8.wav */; };
+		6A8D9B862423244E0053ABB1 /* sbLoop4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6A8D9B7E2423244D0053ABB1 /* sbLoop4.wav */; };
+		6A8D9B872423244E0053ABB1 /* sbLoop3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6A8D9B7F2423244D0053ABB1 /* sbLoop3.wav */; };
+		6A8D9B882423244E0053ABB1 /* sbLoop2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6A8D9B802423244D0053ABB1 /* sbLoop2.wav */; };
+		6A8D9B892423244E0053ABB1 /* sbLoop1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6A8D9B812423244D0053ABB1 /* sbLoop1.wav */; };
+		6A8D9B8A2423244E0053ABB1 /* sbLoop6.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6A8D9B822423244E0053ABB1 /* sbLoop6.wav */; };
+		6A8D9B8B2423244E0053ABB1 /* sbLoop5.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6A8D9B832423244E0053ABB1 /* sbLoop5.wav */; };
+		6A8D9B8C2423244E0053ABB1 /* sbLoop7.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6A8D9B842423244E0053ABB1 /* sbLoop7.wav */; };
+		6A8D9B8E2423F7880053ABB1 /* CustomStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8D9B8D2423F7880053ABB1 /* CustomStyles.swift */; };
+		6AEE7DBC24247999005843F3 /* SoundInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEE7DBB24247999005843F3 /* SoundInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6A0B334024317511003105AB /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		6A0B33422431775F003105AB /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		6A8D9B62242322B50053ABB1 /* Moobaxas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moobaxas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A8D9B65242322B50053ABB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A8D9B67242322B50053ABB1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +40,16 @@
 		6A8D9B71242322B70053ABB1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6A8D9B74242322B70053ABB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6A8D9B76242322B70053ABB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A8D9B7D2423244D0053ABB1 /* sbLoop8.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sbLoop8.wav; sourceTree = "<group>"; };
+		6A8D9B7E2423244D0053ABB1 /* sbLoop4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sbLoop4.wav; sourceTree = "<group>"; };
+		6A8D9B7F2423244D0053ABB1 /* sbLoop3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sbLoop3.wav; sourceTree = "<group>"; };
+		6A8D9B802423244D0053ABB1 /* sbLoop2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sbLoop2.wav; sourceTree = "<group>"; };
+		6A8D9B812423244D0053ABB1 /* sbLoop1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sbLoop1.wav; sourceTree = "<group>"; };
+		6A8D9B822423244E0053ABB1 /* sbLoop6.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sbLoop6.wav; sourceTree = "<group>"; };
+		6A8D9B832423244E0053ABB1 /* sbLoop5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sbLoop5.wav; sourceTree = "<group>"; };
+		6A8D9B842423244E0053ABB1 /* sbLoop7.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sbLoop7.wav; sourceTree = "<group>"; };
+		6A8D9B8D2423F7880053ABB1 /* CustomStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStyles.swift; sourceTree = "<group>"; };
+		6AEE7DBB24247999005843F3 /* SoundInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +82,7 @@
 		6A8D9B64242322B50053ABB1 /* Moobaxas */ = {
 			isa = PBXGroup;
 			children = (
+				6A8D9B7C242324350053ABB1 /* Sounds */,
 				6A8D9B65242322B50053ABB1 /* AppDelegate.swift */,
 				6A8D9B67242322B50053ABB1 /* SceneDelegate.swift */,
 				6A8D9B6C242322B50053ABB1 /* ContentView.swift */,
@@ -66,6 +91,10 @@
 				6A8D9B76242322B70053ABB1 /* Info.plist */,
 				6A8D9B69242322B50053ABB1 /* Moobaxas.xcdatamodeld */,
 				6A8D9B70242322B70053ABB1 /* Preview Content */,
+				6A8D9B8D2423F7880053ABB1 /* CustomStyles.swift */,
+				6AEE7DBB24247999005843F3 /* SoundInfo.swift */,
+				6A0B334024317511003105AB /* AboutView.swift */,
+				6A0B33422431775F003105AB /* Utilities.swift */,
 			);
 			path = Moobaxas;
 			sourceTree = "<group>";
@@ -76,6 +105,21 @@
 				6A8D9B71242322B70053ABB1 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6A8D9B7C242324350053ABB1 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				6A8D9B812423244D0053ABB1 /* sbLoop1.wav */,
+				6A8D9B802423244D0053ABB1 /* sbLoop2.wav */,
+				6A8D9B7F2423244D0053ABB1 /* sbLoop3.wav */,
+				6A8D9B7E2423244D0053ABB1 /* sbLoop4.wav */,
+				6A8D9B832423244E0053ABB1 /* sbLoop5.wav */,
+				6A8D9B822423244E0053ABB1 /* sbLoop6.wav */,
+				6A8D9B842423244E0053ABB1 /* sbLoop7.wav */,
+				6A8D9B7D2423244D0053ABB1 /* sbLoop8.wav */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +181,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A8D9B75242322B70053ABB1 /* LaunchScreen.storyboard in Resources */,
+				6A8D9B8A2423244E0053ABB1 /* sbLoop6.wav in Resources */,
+				6A8D9B8B2423244E0053ABB1 /* sbLoop5.wav in Resources */,
 				6A8D9B72242322B70053ABB1 /* Preview Assets.xcassets in Resources */,
+				6A8D9B852423244E0053ABB1 /* sbLoop8.wav in Resources */,
+				6A8D9B862423244E0053ABB1 /* sbLoop4.wav in Resources */,
+				6A8D9B882423244E0053ABB1 /* sbLoop2.wav in Resources */,
+				6A8D9B892423244E0053ABB1 /* sbLoop1.wav in Resources */,
+				6A8D9B872423244E0053ABB1 /* sbLoop3.wav in Resources */,
 				6A8D9B6F242322B70053ABB1 /* Assets.xcassets in Resources */,
+				6A8D9B8C2423244E0053ABB1 /* sbLoop7.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,8 +202,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A8D9B66242322B50053ABB1 /* AppDelegate.swift in Sources */,
+				6A0B334124317511003105AB /* AboutView.swift in Sources */,
+				6AEE7DBC24247999005843F3 /* SoundInfo.swift in Sources */,
 				6A8D9B68242322B50053ABB1 /* SceneDelegate.swift in Sources */,
+				6A8D9B8E2423F7880053ABB1 /* CustomStyles.swift in Sources */,
 				6A8D9B6D242322B50053ABB1 /* ContentView.swift in Sources */,
+				6A0B33432431775F003105AB /* Utilities.swift in Sources */,
 				6A8D9B6B242322B50053ABB1 /* Moobaxas.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
