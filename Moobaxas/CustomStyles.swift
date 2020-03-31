@@ -65,6 +65,7 @@ struct CustomTextField: View {
     var placeHolder: String
     var rotation: Double
     var scale: CGFloat
+    var offset: CGFloat
     
     var body: some View {
 //        HStack {
@@ -75,6 +76,7 @@ struct CustomTextField: View {
                 .opacity(Double(scale))
                 .scaleEffect(scale)
                 .rotationEffect(.degrees(rotation))
+                .offset(x: offset)
                 .onAppear {
                     let baseAnimation = Animation.easeInOut(duration: 1).delay(3)
                     let repeated = baseAnimation.repeatForever(autoreverses: true)
@@ -83,5 +85,31 @@ struct CustomTextField: View {
             
             
 //        }
+    }
+}
+
+struct MyToggleStyle: ToggleStyle {
+    let width: CGFloat = 50
+    
+    func makeBody(configuration: Self.Configuration) -> some View {
+        HStack {
+            configuration.label
+
+            ZStack(alignment: configuration.isOn ? .trailing : .leading) {
+                RoundedRectangle(cornerRadius: 4)
+                    .frame(width: width, height: width / 2)
+                    .foregroundColor(configuration.isOn ? .green : .red)
+                
+                RoundedRectangle(cornerRadius: 4)
+                    .frame(width: (width / 2) - 4, height: width / 2 - 6)
+                    .padding(4)
+                    .foregroundColor(.white)
+                    .onTapGesture {
+                        withAnimation {
+                            configuration.$isOn.wrappedValue.toggle()
+                        }
+                }
+            }
+        }
     }
 }

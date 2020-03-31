@@ -22,6 +22,8 @@ struct ContentView: View {
     
     @State var isPresentingModal: Bool = false
     
+    @State var repeatBeat: Bool = true
+    
     @State private var activeButton = 0
     @State private var speedValue: Float = 1.0
     @State private var speedDefault: Float = 1.0
@@ -39,7 +41,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List {
-                
+
                 HStack (spacing: 15) {
                     Button(action: {self.playBuffer(buttonNo: 1)}) {
                         if activeButton == 1 {
@@ -145,7 +147,7 @@ struct ContentView: View {
                     Button(action: {self.reverbReset()}) { Text("Reset") }
                         .foregroundColor(.blue)
                     VStack {
-//                        Text("Reverb").bold()+Text(" (\(reverbValue))")
+                        //                        Text("Reverb").bold()+Text(" (\(reverbValue))")
                         Text("Reverb").bold()
                         Text("\(reverbLabel)")
                     }
@@ -159,7 +161,7 @@ struct ContentView: View {
                     Button(action: {self.distortionReset()}) { Text("Reset") }
                         .foregroundColor(.gray)
                     VStack {
-//                        Text("Distortion").bold()+Text(" (\(distortionValue))")
+                        //                        Text("Distortion").bold()+Text(" (\(distortionValue))")
                         Text("Distortion").bold()
                         Text("\(distortionLabel)")
                     }
@@ -170,6 +172,13 @@ struct ContentView: View {
                         .foregroundColor(.red)
                     Button(action: {self.reset()}) { Text("Reset") }
                         .foregroundColor(.red)
+                    
+                    
+                    Toggle(isOn: $repeatBeat) {
+                        Text("🔁 Loop").bold()
+                    } .toggleStyle(MyToggleStyle())
+                    
+                    
                 }.buttonStyle(CircleStyle())
                 
             }
@@ -180,8 +189,6 @@ struct ContentView: View {
     }
     
     func initValues() {
-        
-        
         speedValue = speedControl.rate
         speedDefault = speedControl.rate
         speedLabel = String(format: "%.02f", arguments: [speedValue])
@@ -203,7 +210,6 @@ struct ContentView: View {
     }
     
     func stop() {
-        
         audioEngine.stop()
         activeButton = 0
     }
@@ -236,30 +242,23 @@ struct ContentView: View {
         distortionValue = distortionDownNow(distortionValue: distortionValue)
         distortionLabel = distortionDesc(distortionValue: distortionValue)
         distortion.loadFactoryPreset(AVAudioUnitDistortionPreset(rawValue: distortionValue)!)
-        
         distortion.wetDryMix = 25
         self.playBuffer(buttonNo: activeButton)
     }
     
     func distortionUp() {
-        
         distortionValue = distortionUpNow(distortionValue: distortionValue)
         distortionLabel = distortionDesc(distortionValue: distortionValue)
         distortion.loadFactoryPreset(AVAudioUnitDistortionPreset(rawValue: distortionValue)!)
-        
         distortion.wetDryMix = 25
         self.playBuffer(buttonNo: activeButton)
-        
     }
     
     func distortionReset() {
         distortionValue = 0
-        
         distortionLabel = ""
-        
         distortion.reset()
         self.playBuffer(buttonNo: activeButton)
-        
     }
     
     func reset() {
@@ -267,9 +266,7 @@ struct ContentView: View {
         resetPitch()
         reverbReset()
         distortionReset()
-        
         self.playBuffer(buttonNo: activeButton)
-        
     }
     
     func resetSpeed() {
@@ -317,7 +314,6 @@ struct ContentView: View {
         
         let filename = "sbLoop\(buttonNo).wav"
         let filePath = Bundle.main.path(forResource: filename, ofType:nil)!
-        print("\(filePath)")
         let fileURL: URL = URL(fileURLWithPath: filePath)
         guard let audioFile = try? AVAudioFile(forReading: fileURL) else{ return }
         
@@ -358,7 +354,12 @@ struct ContentView: View {
         
         try? audioEngine.start()
         audioFilePlayer.play()
-        audioFilePlayer.scheduleBuffer(audioFileBuffer, at: nil, options:AVAudioPlayerNodeBufferOptions.loops)
+        
+        if repeatBeat {
+            audioFilePlayer.scheduleBuffer(audioFileBuffer, at: nil, options:AVAudioPlayerNodeBufferOptions.loops)
+        } else {
+            audioFilePlayer.scheduleBuffer(audioFileBuffer, at: nil)
+        }
     }
 }
 

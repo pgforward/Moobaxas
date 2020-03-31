@@ -15,14 +15,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" misplaced="YES" image="saxmoobaa" translatesAutoresizingMaskIntoConstraints="NO" id="kOF-iz-52M">
-                                <rect key="frame" x="56.047393364928894" y="286" width="299" height="325.00000000000017"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="saxmoobaa" translatesAutoresizingMaskIntoConstraints="NO" id="kOF-iz-52M">
+                                <rect key="frame" x="56" y="286" width="299" height="324"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="kOF-iz-52M" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="B1q-5K-5qh"/>
-                            <constraint firstItem="kOF-iz-52M" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="yUD-ij-bCb"/>
+                            <constraint firstItem="kOF-iz-52M" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="56.047393364928894" id="Ckd-fU-sew"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kOF-iz-52M" secondAttribute="trailing" constant="58.952606635071106" id="DK6-Jq-hAy"/>
+                            <constraint firstItem="kOF-iz-52M" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="jlK-IB-Vyd"/>
+                            <constraint firstItem="kOF-iz-52M" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="242" id="nig-Uq-8Ff"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
