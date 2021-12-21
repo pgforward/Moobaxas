@@ -27,8 +27,7 @@ struct AboutView: View {
     @Environment(\.presentationMode) var presentationMode
     let offsetConst: CGFloat = 0
 
-    @State var rotation: Double = 45
-    @State var scale: CGFloat = 1
+    @State var rotation: Double = 4
     @State var moo = true
     @State private var allowAnimations : Bool = false
     
@@ -46,14 +45,14 @@ struct AboutView: View {
                     Spacer()
                     
                     VStack {
-                        CustomTextField(placeHolder: "M", rotation: rotation, scale: scale, offset: moo ? -40 : 65)
-                        CustomTextField(placeHolder: "O", rotation: rotation, scale: scale, offset: moo ? -20 : 50)
-                        CustomTextField(placeHolder: "O", rotation: rotation, scale: scale, offset: moo ? 0 : 35)
-                        CustomTextField(placeHolder: "B", rotation: rotation, scale: scale, offset: moo ? 20 : 20)
-                        CustomTextField(placeHolder: "A", rotation: rotation, scale: scale, offset: moo ? 40 : 5)
-                        CustomTextField(placeHolder: "X", rotation: rotation, scale: scale, offset: moo ? 60 : -10)
-                        CustomTextField(placeHolder: "A", rotation: rotation, scale: scale, offset: moo ? 80 : -25)
-                        CustomTextField(placeHolder: "S", rotation: rotation, scale: scale, offset: moo ? 100 : -40)
+                        CustomTextField(placeHolder: "M", rotation: rotation, scale: moo ? 1.3 : 0.88, offset: moo ? -40 : 65)
+                        CustomTextField(placeHolder: "O", rotation: rotation, scale: moo ? 1.24 : 0.94, offset: moo ? -20 : 50)
+                        CustomTextField(placeHolder: "O", rotation: rotation, scale: moo ? 1.08 : 1.0, offset: moo ? 0 : 35)
+                        CustomTextField(placeHolder: "B", rotation: rotation, scale: moo ? 1.02 : 1.06, offset: moo ? 20 : 20)
+                        CustomTextField(placeHolder: "A", rotation: rotation, scale: moo ? 1.06 : 1.02, offset: moo ? 40 : 5)
+                        CustomTextField(placeHolder: "X", rotation: rotation, scale: moo ? 1.0 : 1.08, offset: moo ? 60 : -10)
+                        CustomTextField(placeHolder: "A", rotation: rotation, scale: moo ? 0.94 : 1.24, offset: moo ? 80 : -25)
+                        CustomTextField(placeHolder: "S", rotation: rotation, scale: moo ? 0.88 : 1.3, offset: moo ? 100 : -40)
                     }
                     .onAppear() {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
@@ -62,7 +61,6 @@ struct AboutView: View {
                             let repeated = baseAnimation.repeatForever(autoreverses: true)
                             withAnimation(repeated) {
                                 rotation = -45
-                                scale = 0.75
                                 moo = false
                             }
                         }
